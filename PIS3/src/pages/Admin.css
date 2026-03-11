@@ -1,0 +1,305 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+}
+
+.admin-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e40af; /* bleu médical */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header-left p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.menu button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu button:hover {
+  background-color: #1d4ed8;
+}
+
+.menu button svg {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+/* =========================
+   FORMULAIRE
+========================= */
+.section.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  
+}
+
+.section.card{
+    width: 2000px;
+}
+
+.section.card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #1e40af;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  align-items: center;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid button {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+.form-grid button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-grid button:hover {
+  background-color: #1d4ed8;
+}
+
+/* =========================
+   CARTES UTILISATEURS
+========================= */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin: 0 0 10px 0;
+  color: #1e40af;
+}
+
+.card div {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-action {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-green { background-color: #16a34a; color: white; }
+.btn-green:hover { background-color: #15803d; }
+
+.btn-red { background-color: #dc2626; color: white; }
+.btn-red:hover { background-color: #b91c1c; }
+
+/* =========================
+   TABLEAUX
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+table thead {
+  background-color: #1e40af;
+  color: white;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+table tbody tr:hover {
+  background-color: #e0e7ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .menu {
+    flex-wrap: wrap;
+  }
+}
+
+
+.user-photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 450px;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  background: #f5f7fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.input-icon svg {
+  color: #1e40af;
+  margin-right: 8px;
+}
+
+.input-icon input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+}
+
+.btn-submit {
+  margin-top: 10px;
+  padding: 10px;
+  background: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #1e3a8a;
+}
+
+.btn-red {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.btn-red:hover {
+  background-color: #dc2626;
+}
+
+.btn-blue {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background-color: #2563eb;
+}
+
+.btn-action {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+.card-body{
+    width: 450px;
+}
